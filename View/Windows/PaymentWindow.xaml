@@ -1,0 +1,30 @@
+﻿<Window x:Class="RestoApp_Churgel_Gavrilin.View.Windows.PaymentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RestoApp_Churgel_Gavrilin.View.Windows"
+        mc:Ignorable="d"
+        Title="PaymentWindow" Height="300" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="1" Name="ChangeTbl" FontSize="20"/>
+        <TextBlock  Name="ToPayTbl" FontSize="20"/>
+        <TextBlock Text="Наличными:" Grid.Row="1" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBlock Text="Банковской картой:" Grid.Row="2" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Button Grid.Row="4" Grid.ColumnSpan="2" Style="{StaticResource DefaultButtonStyle}" Name="Pay" Content="Оплатить" Click="Pay_Click" />
+        <TextBox Name="BankCardTb" Grid.Row="2" Grid.Column="2"  LostFocus="BankCardTbl_LostFocus" />
+        <TextBox Name="CashTb" Grid.Row="1" Grid.Column="1" TextChanged="CashTbl_TextChanged"/>
+        
+    </Grid>
+</Window>

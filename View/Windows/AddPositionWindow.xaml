@@ -1,0 +1,59 @@
+﻿<Window x:Class="RestoApp_Churgel_Gavrilin.View.Windows.AddPositionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RestoApp_Churgel_Gavrilin.View.Windows"
+        mc:Ignorable="d"
+        Title="AddPositionWindow" Height="450" Width="500" Loaded="Window_Loaded" Name="yyy">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+
+           
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        
+            <TextBlock VerticalAlignment="Center"  
+                       HorizontalAlignment="Left" 
+                       FontSize="25" 
+                       FontFamily="SemiBold"
+                       Text="Название">
+            </TextBlock>
+            <TextBlock 
+                VerticalAlignment="Center"  
+                       HorizontalAlignment="Left" 
+                       FontSize="25" 
+                       FontFamily="SemiBold"
+                       Text="Цена"
+                Grid.Row="1">
+            </TextBlock><TextBlock 
+                VerticalAlignment="Center"  
+                       HorizontalAlignment="Left" 
+                       FontSize="25" 
+                       FontFamily="SemiBold"
+                       Text="Категория"
+                Grid.Row="2">
+            </TextBlock>
+        <TextBox Name="NameTb" 
+            Grid.Column="1" Margin="30"/>
+        <TextBox Name="CostTb" 
+            Grid.Column="3" Grid.Row="1" Margin="30"/>
+        <ComboBox Name="PositionCb" 
+                  Grid.Column="5" Grid.Row="2" Margin="30"/>
+        <Button Name="AddPosition" 
+                Content="Добавить"
+                Grid.Column="1" 
+                Grid.Row="3" 
+                Margin="30"
+                Style="{StaticResource DefaultButtonStyle}" Click="AddPosition_Click"/>
+
+
+    </Grid>
+</Window>
